@@ -1,0 +1,23 @@
+datasource db {
+    provider = "mysql"
+    url= "mysql://NadFb1cArf:IXqVBKJVyo@remotemysql.com:3306/NadFb1cArf"
+}
+model User {
+  id        Int      @default(autoincrement())@id
+  fullName      String
+  companyName      String
+  post String
+  email String @unique
+  password String
+  token String
+  pp1Result Float?
+  pp2Result Float?
+  EquipmentResult Float?
+
+
+}
+
+
+generator client {
+  provider = "prisma-client-js"
+}
